@@ -66,7 +66,9 @@ button:hover {
 button:active {
   scale: 0.6;
 }
-
+button {
+  all: unset;
+}
 @media (max-width: 500px) {
   .container {
     width: 90%;
@@ -78,7 +80,7 @@ button:active {
   }
 }
 
-@media (max-width: 3500px) {
+@media (max-width: 40000px) {
   .container {
     width: 98%;
     padding: 0 1.7rem;
