@@ -10,7 +10,7 @@ const Submainsection = () => {
         <button>Mern Stck</button>
         <button>Node & Express</button>
       </section>
-      <section className="right-section flex ">
+      <section className="right-section flex">
         {["aa", "bb", "cc", 1, 1, 1, 1].map((item) => {
           return (
             <article className="card" key={item}>
@@ -30,7 +30,7 @@ const Submainsection = () => {
                   </div>
 
                   <a href="#" className="link flex">
-                    More{" "}
+                    More
                     <span
                       className="icon-arrow-right"
                       style={{ alignSelf: "end" }}
