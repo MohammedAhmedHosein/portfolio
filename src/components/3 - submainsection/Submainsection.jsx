@@ -48,14 +48,14 @@ const myProjects = [
   },
 ];
 const Submainsection = () => {
-  const [currentActive, setcurrentActive] = useState("1");
+  const [currentActive, setCurrentActive] = useState("1");
   const [projects, setProjects] = useState(myProjects);
   return (
     <main className="flex">
       <section className="left-section flex">
         <button
           onClick={() => {
-            setcurrentActive("1");
+            setCurrentActive("1");
             setProjects(myProjects);
           }}
           className={currentActive === "1" ? "active" : null}
@@ -64,7 +64,7 @@ const Submainsection = () => {
         </button>
         <button
           onClick={() => {
-            setcurrentActive("2");
+            setCurrentActive("2");
             setProjects(() => {
               return myProjects.filter(
                 (project) => project.type === "HTML & CSS"
@@ -77,7 +77,7 @@ const Submainsection = () => {
         </button>
         <button
           onClick={() => {
-            setcurrentActive("3");
+            setCurrentActive("3");
             setProjects(() => {
               return myProjects.filter(
                 (project) => project.type === "React Native"
@@ -90,7 +90,7 @@ const Submainsection = () => {
         </button>
         <button
           onClick={() => {
-            setcurrentActive("4");
+            setCurrentActive("4");
             setProjects(() => {
               return myProjects.filter(
                 (project) => project.type === "Mern Stack"
@@ -103,7 +103,7 @@ const Submainsection = () => {
         </button>
         <button
           onClick={() => {
-            setcurrentActive("5");
+            setCurrentActive("5");
             setProjects(() => {
               return myProjects.filter(
                 (project) => project.type === "Node & Express"
