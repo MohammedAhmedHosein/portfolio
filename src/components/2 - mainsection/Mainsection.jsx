@@ -1,4 +1,5 @@
 import "./mainsection.css";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const Mainsection = () => {
   return (
     <section className="Mainsection flex con">
@@ -26,7 +27,15 @@ const Mainsection = () => {
           <div className="icon icon-linkedin-square"></div>
         </div>
       </div>
-      <div className="right-section border animation">Ahmed</div>
+      <div className="right-section animation">
+        {" "}
+        <DotLottieReact
+          src="/Computer.json"
+          style={{ height: 600, width: 400 }}
+          loop
+          autoplay
+        />
+      </div>
     </section>
   );
 };

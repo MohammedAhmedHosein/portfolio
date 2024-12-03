@@ -18,6 +18,9 @@ section.Mainsection .avatar {
   box-shadow: 1px 1px 10px var(--avatar);
   margin-right: 16px;
 }
+.animation {
+  margin-left: 1rem;
+}
 
 /* right section */
 
@@ -49,4 +52,27 @@ section.Mainsection .icons .icon:hover {
   transition: 0.3s;
   cursor: pointer;
   color: var(--icon-hover);
+}
+
+@media (max-width: 900px) {
+  section.Mainsection {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  section.Mainsection .left-section {
+    float: none; /* Reset float to prevent overlapping */
+  }
+
+  .animation {
+    float: none; /* Reset float */
+    margin-left: 0; /* Reset margin */
+    margin-top: 1rem; /* Add space from the top */
+  }
+}
+
+@media (max-width: 600px) {
+  .animation {
+    display: none;
+  }
 }

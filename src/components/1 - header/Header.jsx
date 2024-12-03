@@ -3,7 +3,9 @@ import "./header.css";
 
 const Header = () => {
   const [showModal, setshowModal] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? "dark");
+  const [theme, setTheme] = useState(
+    localStorage.getItem("currentMode") ?? "dark"
+  );
 
   useEffect(() => {
     if (theme === "light") {
@@ -27,22 +29,22 @@ const Header = () => {
       <nav>
         <ul className="flex">
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Articles</a>
+            <a href="#articles">Articles</a>
           </li>
+
           <li>
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
+
           <li>
-            <a href="#">Speaking</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
+
       <button
         onClick={() => {
           localStorage.setItem(

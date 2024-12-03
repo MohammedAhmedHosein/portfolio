@@ -9,13 +9,32 @@ function App() {
     <div id="up" className="container">
       <Header />
 
-      <Mainsection />
+      <section id="about">
+        <Mainsection />
+      </section>
+
       <div className="divider" />
-      <Submainsection />
+
+      {/* <section id="about">
+        <Mainsection />
+      </section>
+
+
+      <div className="divider" /> */}
+
+      <section id="articles">
+        <Submainsection />
+      </section>
+
       <div className="divider" />
-      <Contact />
+
+      <section id="contact">
+        <Contact />
+      </section>
       <div className="divider" />
+
       <Footer />
+
       <a href="#up">
         <button className="scroll2Top icon-keyboard_arrow_up"></button>
       </a>

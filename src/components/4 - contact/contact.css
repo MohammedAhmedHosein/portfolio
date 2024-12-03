@@ -71,30 +71,45 @@ section.contact-us .submit:hover {
   scale: 0.97;
 }
 
+@media (max-width: 1200px) {
+  section.contact-us .animation {
+    display: flex; /* Ensure it's visible and flexible */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the content */
+  }
+}
+@media (max-width: 700px) {
+  section.contact-us .animation {
+    display: none; /* Hide the animation element */
+  }
+}
 @media (max-width: 600px) {
-  .animation {
-    display: none;
+  section.contact-us .animation {
+    display: none; /* Hide the animation element */
   }
+
   section.contact-us form {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex; /* Make the form a flex container */
+    flex-direction: column; /* Stack the form elements vertically */
+    width: 85%; /* Limit the form width */
+    margin: 0 auto; /* Center align the form */
   }
+
   section.contact-us form div.flex {
-    flex-direction: column;
-    align-items: start;
+    display: flex; /* Ensure it remains a flex container */
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: flex-start; /* Align items to the start */
   }
+
   section.contact-us #email,
   section.contact-us #message {
-    width: 100%;
-    margin-left: 0;
-    padding: 0.5rem 0;
-    margin-top: 1rem;
+    width: 100%; /* Make input elements full width */
+    margin: 1rem 0 0 0; /* Add spacing at the top, reset other margins */
+    padding: 0.5rem; /* Add padding for better touch usability */
   }
+
   section.contact-us .submit {
-    width: 30%;
-    align-self: center;
+    width: 30%; /* Limit the submit button width */
+    align-self: center; /* Center the submit button */
   }
 }
