@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./submainsections.css";
+import { AnimatePresence, motion } from "framer-motion";
 const myProjects = [
   {
     id: 1,
@@ -134,34 +135,61 @@ const Submainsection = () => {
         </button>
       </section>
       <section className="right-section flex">
-        {projects.map((item) => {
-          return (
-            <article className="card" key={item.id}>
-              <img src={item.imgUrl} alt="" width={266} />
+        <AnimatePresence>
+          {projects.map((item) => {
+            return (
+              <motion.article
+                layout
+                initial={{
+                  transform: "scale(0)",
+                  opacity: 0,
+                  rotate: -180,
+                }}
+                animate={{
+                  transform: "scale(1)",
+                  opacity: 1,
+                  rotate: 0,
+                }}
+                transition={{
+                  type: "spring",
+                  damping: 15,
+                  stiffness: 80,
+                  mass: 0.5,
+                }}
+                exit={{
+                  transform: "scale(0.1)",
+                  opacity: 0,
+                  rotate: 180,
+                }}
+                className="card"
+                key={item.id}
+              >
+                <img src={item.imgUrl} alt="" width={266} />
 
-              <div style={{ width: "266px" }} className="box ">
-                <h1 className="title">{item.title}</h1>
+                <div style={{ width: "266px" }} className="box ">
+                  <h1 className="title">{item.title}</h1>
 
-                <p className="sub-title">{item.description}</p>
+                  <p className="sub-title">{item.description}</p>
 
-                <div className="flex icons">
-                  <div className="flex" style={{ gap: "11px" }}>
-                    <button className="icon-link"></button>
-                    <button className="icon-github"></button>
+                  <div className="flex icons">
+                    <div className="flex" style={{ gap: "11px" }}>
+                      <button className="icon-link"></button>
+                      <button className="icon-github"></button>
+                    </div>
+
+                    <a href={item.link} className="link flex">
+                      More
+                      <span
+                        className="icon-arrow-right"
+                        style={{ alignSelf: "end" }}
+                      ></span>
+                    </a>
                   </div>
-
-                  <a href={item.link} className="link flex">
-                    More
-                    <span
-                      className="icon-arrow-right"
-                      style={{ alignSelf: "end" }}
-                    ></span>
-                  </a>
                 </div>
-              </div>
-            </article>
-          );
-        })}
+              </motion.article>
+            );
+          })}
+        </AnimatePresence>
       </section>
     </main>
   );
