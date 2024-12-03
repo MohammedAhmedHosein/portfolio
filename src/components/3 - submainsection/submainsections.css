@@ -1,13 +1,18 @@
+/* General Styles */
 main.flex {
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
-  align-items: start;
+  align-items: center;
+  justify-content: center; /* Ensures content is horizontally centered */
 }
 
-/* Left section */
-
+/* Left Section */
 main section.left-section.flex {
+  display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: center; /* Centers the content */
 }
 
 main section.left-section.flex button {
@@ -33,7 +38,38 @@ main section.left-section.flex button.active {
 main section.left-section.flex button:hover {
   opacity: 1;
 }
+.link {
+  color: var(--subtitle);
+  text-decoration: none;
+}
 
+/* Card Styles */
+.card {
+  border: 1px solid rgba(152, 142, 233, 0.3);
+  border-radius: 5px;
+  background-image: linear-gradient(
+    rgba(152, 142, 233, 0.5),
+    rgba(255, 255, 255, 0.05)
+  );
+  transition: 0.3s;
+  max-width: 300px;
+  margin: 0 auto; /* Centers card horizontally */
+  padding: 1rem;
+  text-align: center; /* Ensures consistent text alignment */
+}
+
+.card img {
+  border-radius: 5px;
+  width: 100%; /* Ensures images are responsive */
+}
+
+.card:hover {
+  transform: rotate(1deg) scale(1.01);
+  border: 1px solid rgba(152, 142, 233, 1);
+  cursor: pointer;
+}
+
+/* Box Inside Card */
 .card .box {
   padding: 1rem 0.4rem;
   overflow: hidden;
@@ -44,7 +80,6 @@ main section.left-section.flex button:hover {
   font-size: 1.15rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  text-align: center;
 }
 
 .card .box .sub-title {
@@ -59,74 +94,63 @@ main section.left-section.flex button:hover {
 
 .card .box .icons {
   justify-content: space-between;
-}
-
-.card .icon-link,
-.card .icon-github {
-  font-size: 1.2rem;
   color: var(--subtitle);
-  transition: 0.3s;
 }
 
-.card .icon-link:hover,
-.card .icon-github:hover {
-  font-size: 1.5rem;
-  color: var(--icon-hover);
-  cursor: pointer;
+/* Button Group */
+.card .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers buttons inside the group */
+  gap: 10px;
 }
 
-.card .link {
-  font-size: 0.9rem;
-  color: var(--blue);
-  transition: 0.3s;
+.card .button-group button {
+  flex: 0 1 calc(50% - 10px); /* Ensures two buttons per row */
+  max-width: 7rem;
 }
 
-.card .link:hover {
-  font-size: 1em;
-}
-
-.card {
-  border: 1px solid rgba(152, 142, 233, 0.3);
-  border-radius: 5px;
-  transition: 0.3s;
-  background-image: linear-gradient(
-    rgba(152, 142, 233, 0.5),
-    rgba(255, 255, 255, 0.05)
-  );
-}
-.card img {
-  border-radius: 5px;
-}
-.card:hover {
-  rotate: 1deg;
-  border: 1px solid rgba(152, 142, 233, 1);
-  cursor: pointer;
-  scale: 1.01;
-}
-
-/* Right section */
+/* Right Section */
 main section.right-section.flex {
   flex-wrap: wrap;
-  column-gap: 2rem;
+  column-gap: 3rem;
   row-gap: 2rem;
+  justify-content: center; /* Centers content in right section */
 }
+
+/* Media Query for Small Screens */
 @media (max-width: 600px) {
   main.flex {
     flex-direction: column;
-    gap: 2.64rem;
-    align-items: center;
+    gap: 3rem;
+    align-items: center; /* Centers content vertically */
+    justify-content: center;
   }
 
   main section.left-section.flex {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; /* Center the cards horizontally */
+    justify-content: center; /* Centers the cards horizontally */
     gap: 10px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  main section.left-section.flex button {
-    width: 7rem;
-    padding: 0.8rem 0;
-    font-size: 0.9rem;
+  main section.left-section.flex .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* Reduces width slightly for better responsiveness */
+    max-width: 300px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  main section.left-section.flex .button-group button {
+    flex: 0 1 calc(50% - 10px);
+    max-width: 7rem;
   }
 }
