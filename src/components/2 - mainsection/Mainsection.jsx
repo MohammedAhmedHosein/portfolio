@@ -6,7 +6,6 @@ const Mainsection = () => {
     <section className="Mainsection flex con">
       <div className="left-section">
         <div className="parent-avatar flex">
-        
           <motion.img
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -18,7 +17,7 @@ const Mainsection = () => {
         </div>
 
         <h1 className="title">
-          software engineer, Web Developer, Mobile Developer
+          Software engineer, Web Developer, Mobile Developer
         </h1>
         <p className="sub-title">
           Computer Science fresh graduate with comprehensive skills in full
