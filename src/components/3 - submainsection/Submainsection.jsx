@@ -138,32 +138,7 @@ const Submainsection = () => {
         <AnimatePresence>
           {projects.map((item) => {
             return (
-              <motion.article
-                layout
-                initial={{
-                  transform: "scale(0)",
-                  opacity: 0,
-                  rotate: -180,
-                }}
-                animate={{
-                  transform: "scale(1)",
-                  opacity: 1,
-                  rotate: 0,
-                }}
-                transition={{
-                  type: "spring",
-                  damping: 15,
-                  stiffness: 80,
-                  mass: 0.5,
-                }}
-                exit={{
-                  transform: "scale(0.1)",
-                  opacity: 0,
-                  rotate: 180,
-                }}
-                className="card"
-                key={item.id}
-              >
+              <motion.article className="card" key={item.id}>
                 <img src={item.imgUrl} alt="" width={266} />
 
                 <div style={{ width: "266px" }} className="box ">
