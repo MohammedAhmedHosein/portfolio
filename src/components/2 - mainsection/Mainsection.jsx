@@ -1,11 +1,20 @@
 import "./mainsection.css";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { motion } from "framer-motion";
 const Mainsection = () => {
   return (
     <section className="Mainsection flex con">
       <div className="left-section">
         <div className="parent-avatar flex">
-          <img className="avatar" src="/me.png" alt="Mohammed Ahmed Hosein" />
+        
+          <motion.img
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 3 }}
+            className="avatar"
+            src="/me.png"
+            alt="Mohammed Ahmed Hosein"
+          />
         </div>
 
         <h1 className="title">

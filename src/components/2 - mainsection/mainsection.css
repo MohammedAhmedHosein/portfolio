@@ -10,7 +10,7 @@ section.Mainsection .left-section {
 }
 
 section.Mainsection .avatar {
-  width: 88px;
+  width: 150px;
   border-radius: 50%;
   border: 1px solid;
   padding: 2px;
@@ -20,6 +20,7 @@ section.Mainsection .avatar {
 }
 .animation {
   margin-left: 1rem;
+  translate: 20px 60px;
 }
 
 /* right section */
@@ -71,7 +72,7 @@ section.Mainsection .icons .icon:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .animation {
     display: none;
   }
