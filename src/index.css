@@ -6,13 +6,29 @@
   --subtitle: rgb(161 161 170);
   --blue: rgb(93, 188, 252);
   --bgHeader: rgb(39, 39, 42);
-
+  --avatar: rgb(248, 248, 248);
   --icon-hover: #d4d4d8;
 }
 
 body {
   background-color: var(--primary);
   color: #fff;
+  overflow: auto;
+  scrollbar-width: none; /* Hides scrollbar */
+}
+.light {
+  --primary: rgb(255, 255, 255);
+  --secondary: rgb(255, 255, 255);
+  --title: rgb(39, 39, 42);
+  --subtitle: rgb(82, 82, 91);
+  --border: rgba(202, 202, 202, 0.518);
+  --icon-hover: #333;
+  --bgHeader: rgb(253, 253, 253);
+  --blue: rgb(93, 188, 252);
+  --avatar: rgb(152, 142, 233);
+}
+::-webkit-scrollbar {
+  display: none; /* Hides scrollbar */
 }
 
 html {
@@ -70,7 +86,7 @@ button {
   all: unset;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.8rem;
 }
 
@@ -87,7 +103,7 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(120, 110, 213);
-}
+} */
 
 .scroll2Top {
   background-color: rgba(120, 110, 213, 0.4);
@@ -113,12 +129,6 @@ button {
     width: calc(100% + 1.7rem + 1.7rem);
     margin-left: -1.7rem;
   }
-  .scroll2Top {
-    width: 2.2rem;
-    height: 2.2rem;
-    opacity: 0.5;
-    right: 4%;
-  }
 }
 
 @media (max-width: 40000px) {
@@ -129,5 +139,11 @@ button {
   .divider {
     width: calc(100% + 1.7rem + 1.7rem);
     margin-left: -1.7rem;
+  }
+  .scroll2Top {
+    width: 2.2rem;
+    height: 2.2rem;
+    opacity: 0.5;
+    right: 4%;
   }
 }
