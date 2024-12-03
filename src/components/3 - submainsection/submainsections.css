@@ -41,6 +41,13 @@ main section.left-section.flex button:hover {
 .link {
   color: var(--subtitle);
   text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+.link:hover {
+  color: rgba(152, 142, 233, 1);
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
 /* Card Styles */
@@ -95,8 +102,19 @@ main section.left-section.flex button:hover {
 .card .box .icons {
   justify-content: space-between;
   color: var(--subtitle);
+  font-size: 1.4rem;
+}
+.icon-link:hover {
+  color: rgba(152, 142, 233, 1);
+  font-size: 1.7rem;
+  transition: 0.3s;
 }
 
+.icon-github:hover {
+  color: rgba(152, 142, 233, 1);
+  font-size: 1.7rem;
+  transition: 0.3s;
+}
 /* Button Group */
 .card .button-group {
   display: flex;
@@ -119,7 +137,8 @@ main section.right-section.flex {
 }
 
 /* Media Query for Small Screens */
-@media (max-width: 600px) {
+
+@media (min-width: 600px) {
   main.flex {
     flex-direction: column;
     gap: 3rem;
