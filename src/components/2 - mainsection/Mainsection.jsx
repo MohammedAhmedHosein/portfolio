@@ -30,7 +30,7 @@ const Mainsection = () => {
       <div className="right-section animation">
         {" "}
         <DotLottieReact
-          src="/Computer.json"
+          src="/Computer1.json"
           style={{ height: 600, width: 400 }}
           loop
           autoplay
