@@ -36,7 +36,7 @@ const Header = () => {
           </li>
 
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#articles">Projects</a>
           </li>
 
           <li>
